@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aman Verma">
+    <title>Frame</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .center{
+            display: grid;
+            place-content: center;
+        }
+        body{
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .navigation-bar {
+            width: 100vw;
+            height: 10vh;
+            background-color: dodgerblue;
+            line-height: 10vh;
+            text-align: center;
+        }
+        .container{
+            width: 100vw;
+            height: 84vh;
+            display: flex;
+            text-align: center;
+        }
+
+        .section-1 {
+            width: 20%;
+            height: 100%;
+            background-color: mediumseagreen;
+        }
+        .section-2 {
+            width: 60%;
+            height:100%;
+            background-color: tomato;
+        }
+        .section-3 {
+            width: 20%;
+            height:100%;
+            background-color: lightblue;
+        }
+        .ft{
+            width: 100vw;
+            height: 50px;
+            background-color: crimson;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <h1>This is navigation Section</h1>
+    </nav>
+    <div class="container">
+        <section class="section-1 center">
+            <h2>20% of the page</h2>
+        </section>
+        <section class="section-2 center">
+            <h2>60% of the page</h2>
+        </section>
+        <section class="section-3 center">
+            <h2>remaining % of the page</h2>
+        </section>
+    </div>
+    <footer class="ft">
+        <h2>This is footer section</h2>
+    </footer>
+</body>
+
+</html>

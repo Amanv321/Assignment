@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aman Verma">
+    <title>Department</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Roboto:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: url(images/bg1.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            font-family: 'Inter Tight', sans-serif;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .logo img {
+            width: 95px;
+            height: 80px;
+            margin-left: 50px;
+        }
+
+        .content #content_link {
+            font-size: 17px;
+            text-decoration: underline;
+
+        }
+
+        .container nav {
+            width: 650px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            outline: none;
+
+        }
+
+        nav li a {
+            transition: all 0.3s ease-in-out;
+            padding: 16px;
+        }
+
+
+        .container ul li {
+            display: inline-block;
+            font-size: 18.5px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: rgb(75, 72, 68);
+        }
+
+        li a:hover {
+
+            border: 0px solid lightblue;
+            border-radius: 5px;
+        }
+
+        .container button {
+            width: 100px;
+            padding: 8px;
+            border: 1px solid rgb(122, 163, 255);
+            background-color: rgb(122, 163, 255);
+            border-radius: 5px;
+            margin-right: 20px;
+            font-size: 16px;
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .link #head {
+            height: 35px;
+            color: #fff;
+            border: 1px solid rgb(78, 141, 247);
+            background-color: rgb(78, 141, 247);
+            border-radius: 4px;
+            padding: 10px 20px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .link #head:hover {
+            background-color: #fff;
+            color: rgb(78, 141, 247);
+        }
+
+        .container button:hover {
+            color: rgb(122, 163, 255);
+            background-color: #fff;
+            cursor: not-allowed;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content .text {
+            margin-left: 70px;
+            line-height: 30px;
+            width: 600px;
+
+        }
+
+        .content .text p {
+            text-indent: 100px;
+            text-align: justify;
+            color: rgb(82, 90, 108);
+        }
+
+        .link {
+            margin-top: 20px;
+            font-size: 15px;
+            font-family: 'Inter Tight', sans-serif;
+
+        }
+
+        .link span {
+            color: rgb(99, 113, 129);
+        }
+
+        .content .text h1 {
+            margin-bottom: 30px;
+            color: rgb(32, 53, 69);
+        }
+
+        .content .img2 img {
+            height: 500px;
+            width: 600px;
+            margin: 25px 60px 0 0;
+            border-radius: 0 10px;
+            cursor: pointer;
+        }
+
+        /*content2*/
+        .content2 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter Tight', sans-serif;
+
+        }
+
+        .content2 .img3 {
+            margin-left: 60px;
+
+        }
+
+        /* .content2 .img3 img {
+            border-radius: 5px 0;
+        } */
+
+        .content2 .text2 {
+            margin-right: 70px;
+            line-height: 30px;
+            width: 600px;
+            text-align: center;
+        }
+
+        .content2 .text2 h2 {
+            margin-bottom: 30px;
+            color: rgb(32, 53, 69);
+        }
+
+        .content2 .text2 p {
+            text-indent: 20px;
+            text-align: justify;
+            color: rgb(82, 90, 108);
+        }
+
+        /*content3*/
+        .content3 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter Tight', sans-serif;
+
+        }
+
+        .content3 .img4 img {
+            height: 500px;
+            width: 600px;
+        }
+
+        .content3 .text3 {
+            margin-left: 60px;
+            line-height: 30px;
+            width: 600px;
+
+        }
+
+        .content3 .text3 p {
+            text-indent: 20px;
+            text-align: justify;
+            color: rgb(82, 90, 108);
+
+        }
+
+        .content3 .text3 h2 {
+            margin-bottom: 30px;
+            color: rgb(32, 53, 69);
+            text-align: center;
+        }
+
+        .content3 .img4 {
+            margin-right: 60px;
+        }
+
+        .content3 .img4 {
+
+            border-radius: 0 20px;
+        }
+
+        /*content 4*/
+        .content4 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+        }
+
+        .content4 .box {
+            height: 600px;
+            width: 800px;
+            display: flex;
+
+        }
+
+        .content4 .box .img5 {
+            height: 100%;
+            width: 400px;
+            background-color: rgb(238, 245, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px 0 0 10px;
+            border-top: 1px solid rgb(238, 245, 243);
+            border-bottom: 1px solid rgb(238, 245, 243);
+            border-left: 1px solid rgb(238, 245, 243);
+
+        }
+
+        .content4 .box .img5 figure {
+            height: 200px;
+            width: 200px;
+            /* box-shadow: 5px solid gray; */
+        }
+
+        .img5 img {
+            border: 1px solid #fff;
+            border-radius: 3px;
+            box-shadow: 10px 10px 8px gray;
+        }
+
+        .box .text4 {
+            height: 100%;
+            width: 400px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 20px;
+            background-color: rgb(202, 229, 236);
+            color: rgb(68, 58, 58);
+            padding: 0 50px;
+            text-align: justify;
+            border-radius: 0 10px 10px 0;
+            border-top: 1px solid rgb(182, 221, 231);
+            border-bottom: 1px solid rgb(182, 221, 231);
+            border-right: 1px solid rgb(182, 221, 231);
+        }
+
+        .box .text4 p {
+            margin-top: 150px;
+        }
+
+
+        .img5 figcaption {
+            font-family: 'Times New Roman', Times, serif;
+            text-transform: capitalize;
+            font-size: 17px;
+            word-spacing: 5px;
+            text-align: center;
+            color: rgb(28, 26, 26);
+            margin-top: 15px;
+        }
+
+        .btn {
+            height: 50px;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topbtn {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .topbtn a {
+            height: 35px;
+            width: 100px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            color: #fff;
+            border: 1px solid rgb(78, 141, 247);
+            background-color: rgb(78, 141, 247);
+            border-radius: 5px;
+            text-align: center;
+            padding: 6px 0;
+            transition: all 0.3s ease-in-out;
+
+        }
+
+        .topbtn a:hover {
+            color: rgb(78, 141, 247);
+            background-color: #fff;
+        }
+
+        /*footer*/
+        .ft {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(55, 61, 61);
+        }
+
+        .ft p {
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header starts here-->
+    <header id="head">
+        <div class="container" id="head">
+            <div class="logo">
+                <img src="images/lg.png" alt="" srcset="">
+            </div>
+            <!--Navigation-->
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="routine.html" target="_blank">Department</a></li>
+                    <li><a href="div.html" target="_blank">About</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+            <div id="btn">
+                <button>HelpLine</button>
+            </div>
+        </div>
+        <!--Section 1 starts here...-->
+        <div class="content">
+            <div class="text">
+                <h1>Department of Computer Application</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, reprehenderit dignissimos
+                    doloribus id molestias tenetur quas? Fuga odio fugiat magni cum, libero nostrum placeat corporis
+                    autem voluptatibus voluptate, nesciunt in?
+                    Lorem ipsum <span id="content_link"><a href="https://en.wikipedia.org/wiki/Local_area_network"
+                            target="_blank" style="color: blue;">LAN</a></span> and <span id="content_link"><a
+                            href="https://en.wikipedia.org/wiki/Wide_area_network" target="_blank"
+                            style="color: blue;">WAN</a></span> dolor sit amet consectetur
+                    adipisicing elit. Cum distinctio
+                    illum voluptates debitis
+                    deserunt soluta harum. Ut magnam consequatur quidem accusantium cupiditate atque sint, natus
+                    facilis? Fugiat nihil numquam sequi?
+                </p>
+                <div class="link">
+                    <span>
+                        <strong> Courses provided by Department of Computer Application:</strong>
+                    </span>
+                    <br>
+                    <a href="#bca" id="head">B.C.A</a>
+                    <a href="#mca" id="head">M.C.A</a>
+                </div>
+            </div>
+            <div class="img2">
+                <figure>
+                    <a href="" target="_blank"> <img src="images/image1.webp" alt="Webp Image"></a>
+                    <!-- <img src="images/image1.jpg" alt="Jpeg Image"> -->
+                    <figcaption>This Is a Sample Clickable Image 1</figcaption>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <!--Section 2 starts here...-->
+    <section id="bca">
+        <div class="content2">
+            <div class="img3">
+                <video src="videos/1.mp4" height="500px" width="600px" controls autoplay preload="metadata" loop>
+                </video>
+            </div>
+            <div class="text2">
+                <h2>Bachelors's in Computer Application</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dignissimos eligendi eius porro quas
+                    labore inventore, commodi, aut consectetur quidem dolores ab sit ex soluta sunt molestias quis odit
+                    consequatur.
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis praesentium perspiciatis
+                    voluptate iste, tenetur esse a ullam, eaque ad in optio voluptates quibusdam consectetur sapiente
+                    architecto recusandae alias labore earum?</p>
+            </div>
+        </div>
+    </section>
+    <!--Section 3 starts here...-->
+    <section id="mca">
+        <div class="content3">
+            <div class="text3">
+                <h2>Masters in Computer Application</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, reprehenderit dignissimos
+                    doloribus id molestias tenetur quas? Fuga odio fugiat magni cum, libero nostrum placeat corporis
+                    autem voluptatibus voluptate, nesciunt in?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum distinctio illum voluptates debitis
+                    deserunt soluta harum. Ut magnam consequatur quidem accusantium cupiditate atque sint, natus
+                    facilis? Fugiat nihil numquam sequi?
+                </p>
+            </div>
+            <div class="img4">
+                <video src="videos/2.mp4" height="500px" width="600px" controls autoplay loop
+                    preload="metadata"></video>
+            </div>
+        </div>
+    </section>
+    <!--department head sectionn starts here-->
+    <section class="head-section">
+        <div class="content4">
+            <div class="box">
+                <div class="img5">
+                    <figure>
+                        <img src="images/head.webp" alt="" height="200px" width="200px">
+                        <figcaption>Mr.X</figcaption>
+                    </figure>
+                </div>
+                <div class="text4">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque labore eaque ratione quam
+                        quidem
+                        dolores doloribus? Vero blanditiis aliquid obcaecati dicta molestias non. Error, recusandae
+                        consectetur vitae mollitia quidem minima.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis sapiente praesentium
+                        assumenda aut beatae natus minima qui minus modi laboriosam, dignissimos consectetur! Quos
+                        deserunt veritatis officiis eum, iure vel delectus?
+                    </p><br>
+                    <audio controls>
+                        <source src="audio/1.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div class="topbtn">
+            <a href="#head">To the top</a>
+
+        </div>
+    </section>
+    <!-- Footer starts here-->
+    <footer>
+        <div class="ft">
+            <p> all rights reserved under @amanv8291</p>
+        </div>
+    </footer>
+</body>
+
+</html>
